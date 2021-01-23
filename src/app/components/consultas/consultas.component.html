@@ -1,0 +1,92 @@
+
+<mat-drawer-container class="example-container" autosize>
+
+  <mat-drawer #drawer mode="side">
+    <div class="texto">
+      <p class="menuText"> Menu </p>
+    </div>
+
+    <button mat-raised-button matTooltip="Cerrar sesión"
+      style="position: absolute;  color: #ffff; background-color: rgb(18, 150, 88, 0.900);">
+      <mat-icon style="color: #ffff;">exit_to_app</mat-icon>Cerrar Sesión
+    </button>
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+    <mat-toolbar>
+
+      <mat-toolbar-row>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
+          (click)="drawer.toggle()">
+          <mat-icon style="color: #5D5D5D;">menu</mat-icon>
+        </button>
+      </mat-toolbar-row>
+    </mat-toolbar>
+
+    <div>
+        <h1 class="titulo"> 
+            CONSULTAS - COMPRAS CON EL COFRE
+        </h1>
+    </div>
+
+    <div class="form-row">
+
+        <div class="iconSearch"> 
+            <mat-icon >search</mat-icon>
+        </div>
+
+        <div class="col-md-3 mb-3"> 
+            <select class="form-control" id="buscar" >
+              <option value="Campo">Campo</option>
+              <option value="2">2</option>
+            </select>
+        </div>
+
+        <div class="col-md-6 mb-3">
+            <input type="text" class="form-control" id="placa" placeholder="Buscar" >
+        </div>
+
+        <div class="searchButton">
+            <button class="btn  btn-block"> Buscar </button>
+        </div>
+      </div>
+
+    <div class="card">
+        <table class="table">
+            <thead>
+              <tr>
+                
+                <th scope="col">Nombre</th>
+                <th scope="col">Cel</th>
+                <th scope="col">Email</th>
+                <th scope="col">Fecha de compra</th>
+                <th scope="col">Edad</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <td >Larry the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+
+    </div>
+    
+  </div>
+
+</mat-drawer-container>

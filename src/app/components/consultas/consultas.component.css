@@ -1,0 +1,146 @@
+
+.menuText{
+    margin-top: 15%;
+    margin-left: 25%;
+    
+    color: #5D5D5D;
+    font: normal normal 32px/39px;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 0px;
+    color: #5D5D5D;
+    opacity: 1;
+}
+
+mat-toolbar{
+    background: #004B40 0% 0% no-repeat padding-box;
+    opacity: 1;
+    width: 100%;
+}
+
+mat-drawer {
+    width: 15%;
+    background-color: #ffffff; 
+    color: #5a5a5a;
+}
+
+.example-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 1px 7px 15px  #777575;     
+}
+
+.example-is-mobile .example-toolbar {
+    position: fixed;
+    z-index: 2;
+}
+
+.card {
+    margin: 20px auto 0% auto;
+    width: 97%;
+}
+
+thead{
+    font: normal normal bold 16px/19px ;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 0px;
+    color: #004B40;
+    opacity: 1;
+}
+
+tr {
+    text-align: center;
+}
+
+.titulo {
+
+    margin-top: 3%;
+    
+    margin-left: 1%;
+    font-size: 32px; 
+    font-weight: bold;
+    letter-spacing: 0px;
+    color: #1EEB00;
+    text-transform: uppercase;
+    opacity: 1;
+}
+
+.form-row {
+    margin-left: 1%;
+}
+
+.form-row select {
+    /* Layaout Properties */
+    
+    /* UI Properties */
+    border:none;
+    border-bottom:1px solid #4D4D4D;
+    border-radius:0;
+    box-shadow:none;
+    outline:none;
+    color:inherit;
+}
+
+.form-row input {
+    /* Layaout Properties */
+    
+    /* UI Properties */
+    border:none;
+    border-bottom:1px solid #4D4D4D;
+    border-radius:0;
+    box-shadow:none;
+    outline:none;
+    color:inherit;
+}
+
+.form-row button {
+    /* Layaout Properties */
+    width: 160px;
+    height: 38px;
+    
+    /* UI Properties */
+    padding-top: 2px;
+    background: #1EEB00 0% 0% no-repeat padding-box;
+    opacity: 1;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.iconSearch mat-icon {
+    width: 27px;
+    height: 27px;
+    padding-top: 12px;
+}
+
+
+@media (max-width: 600px){
+    mat-drawer {
+        width: 30%;
+        background-color: #ffffff; 
+        color: #5a5a5a;
+    }
+
+    .menuText{
+        margin-top: 15%;
+        margin-left: 25%;
+        
+        color: #5D5D5D;
+        font: normal normal 32px/39px;
+        font-size: 22px;
+        font-weight: bold;
+        letter-spacing: 0px;
+        color: #5D5D5D;
+        opacity: 1;
+    }
+
+}
+
+
+
+  
