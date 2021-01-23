@@ -1,4 +1,4 @@
-export interface PurchasesInterface {
+export class Purchases {
     vault_id: String;
     filter_field: String;
     filter_value: String;

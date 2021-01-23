@@ -31,7 +31,10 @@ body.my-login-page {
     background-repeat: no-repeat;
     opacity: 1;
 }
-
+.error{
+    font-size: 10px;
+    color: red;
+}
 .my-login-page .brand img {
 	width: 100%;
 }

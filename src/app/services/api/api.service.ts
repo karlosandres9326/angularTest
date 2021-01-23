@@ -1,11 +1,6 @@
 import { Injectable } from '@angular/core';
-import { enc, AES, mode, pad, MD5 } from 'crypto-js';
 import { environment } from '../../../environments/environment';
-
-
-
-import { CredentialsInterface } from '../../models/credentials.interface';
-import { PayloadInterface } from '../../models/payload.interface';
+import { Payload } from '../../models/payload.interface';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs'
 
@@ -15,16 +10,21 @@ import { Observable } from 'rxjs'
 export class ApiService {
 
   private urlServer = environment.server;
-
-  private static CONFIG = {
-    mode: mode.ECB,
-    padding: pad.Pkcs7
-  };
-
-  constructor(private http: HttpClient) { }
+  token: string
 
 
-  
+  constructor(private http: HttpClient) {
+
+    this.token = localStorage.getItem('token')
+  }
+
+  onSearch(payload: Payload): Observable<Payload> {
+    var headers = new HttpHeaders().set('Authorization', this.token);
+    const purchases = this.urlServer + "/pockets/reports/transactions/purchases?apiKey=252156";
+    return this.http.post<Payload>(purchases, payload, { headers });
+
+  }
+
 }
 
 

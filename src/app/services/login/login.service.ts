@@ -4,8 +4,8 @@ import { environment } from '../../../environments/environment';
 
 
 
-import { CredentialsInterface } from '../../models/credentials.interface';
-import { PayloadInterface } from '../../models/payload.interface';
+import { Credentials } from '../../models/credentials.interface';
+import { Payload } from '../../models/payload.interface';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs'
 
@@ -14,16 +14,16 @@ import { Observable } from 'rxjs'
 })
 export class LoginService {
 
-private urlServer = environment.server;
+  private urlServer = environment.server;
 
-constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { }
 
-onLogin(message: CredentialsInterface): Observable<PayloadInterface> {
- 
-const login =  this.urlServer + "/login";
-  return this.http.post<PayloadInterface>(login, message);
+  onLogin(payload: Payload): Observable<Payload> {
+    //var headers = new HttpHeaders().set('Authorization', token); 
+    const login = this.urlServer + "/login?apiKey=252156";
+    return this.http.post<Payload>(login, payload,);
 
-}
+  }
 
 
 

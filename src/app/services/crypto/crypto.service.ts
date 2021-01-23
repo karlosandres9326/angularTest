@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { enc, AES, mode, pad, MD5 } from 'crypto-js';
 import { environment } from '../../../environments/environment';
 
-import { CredentialsInterface } from '../../models/credentials.interface';
-import { PayloadInterface } from '../../models/payload.interface';
+import { Credentials } from '../../models/credentials.interface';
+import { Payload } from '../../models/payload.interface';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -18,7 +18,7 @@ export class CryptoService {
     padding: pad.Pkcs7,
   };
 
-  constructor() {}
+  constructor() { }
 
   encrypt(message: string): string {
     const toEncryptedArray = enc.Utf8.parse(message);

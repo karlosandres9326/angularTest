@@ -1,3 +1,3 @@
-export interface PayloadInterface {
+export class Payload {
     payload: String;
 }
